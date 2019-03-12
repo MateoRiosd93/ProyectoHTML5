@@ -1,0 +1,91 @@
+:root {
+    --azul: #006ba8;
+    --gris: #777777;
+    --texto: #444;
+    --link: #00a0eb;
+}
+
+
+/* BASE (SMACSS) */
+
+a {
+    color: var(--link);
+}
+
+.main-sidebar {
+    padding: 0 0.5em;
+}
+
+.logo {
+    width: 140px;
+    display: block;
+    margin: .5em auto;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.baner {
+    width: 100%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 0 0 auto;
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu {
+    background: var(--azul);
+    margin-left: auto;
+    padding: 0.5em 0;
+}
+
+.menu a {
+    text-transform: uppercase;
+    font-size: .8em;
+    color: rgb(243, 233, 233);
+    font-weight: bold;
+    line-height: 2;
+}
+
+.menu li {
+    margin: 0 0.5em;
+}
+
+.main-header {
+    /* display: -o-flex;
+    display: flex; */
+    width: 100%;
+}
+
+main {
+    padding: 0 1em;
+}
+
+h1 {
+    color: var(--azul);
+}
+
+:root footer {
+    background: #333;
+    color: aliceblue;
+    padding: 1em;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.siguenos a {
+    display: block;
+    font-size: 0.9em;
+}
+
+.siguenos a:before {
+    display: inline-block;
+    margin: .3em;
+}

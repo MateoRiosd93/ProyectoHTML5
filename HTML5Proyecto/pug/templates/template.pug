@@ -1,0 +1,39 @@
+block config    
+    include ../config/config.pug
+
+doctype html
+html    
+    head    
+        title #{pageTitle} | #{siteTitle}
+        meta(charset="utf-8")
+        meta(name="description" content=description)
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+        link(href="https://file.myfontastic.com/dyarS53jWQuBjEtEuGdTHG/icons.css" rel="stylesheet")
+        link(rel="icon", href="/img/favicon")
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")       
+        link(rel="stylesheet", href="/css/styles-dist.css")
+    body
+        header.main-header
+            .logo-container
+                a(href="/")
+                    img(src="img/logo.svg" alt="logo de escuela digital").logo
+
+            nav.menu
+                include ../blocks/menu.pug
+
+        div
+            block banner 
+                img(src="/img/" + currentPage + ".jpg" alt="descripcion del banner de la pagina " + currentPage).baner
+
+        main 
+            block main
+
+        aside.main-sidebar
+            if siguenos == true 
+                block aside
+                    include ../blocks/siguenos.pug
+
+        footer
+            block footer
+                
+                
