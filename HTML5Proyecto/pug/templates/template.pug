@@ -12,7 +12,7 @@ html
         link(rel="icon", href="/img/favicon")
         link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")       
         link(rel="stylesheet", href="/css/styles-dist.css")
-    body
+    body(class=currentPage)
         header.main-header
             .logo-container
                 a(href="/")
@@ -21,19 +21,20 @@ html
             nav.menu
                 include ../blocks/menu.pug
 
-        div
+        div.main-baner
             block banner 
                 img(src="/img/" + currentPage + ".jpg" alt="descripcion del banner de la pagina " + currentPage).baner
+        div.main-content
+            main 
+                block main
 
-        main 
-            block main
+            aside.main-sidebar
+                if siguenos == true 
+                    block aside
+                        include ../blocks/siguenos.pug
 
-        aside.main-sidebar
-            if siguenos == true 
-                block aside
-                    include ../blocks/siguenos.pug
-
-        footer
+        footer.main-footer
+            p Creativos ABC - Todos los derechos reservados
             block footer
                 
                 
